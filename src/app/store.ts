@@ -1,10 +1,8 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
 import { conversationApi } from '../services/conversations';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
     [conversationApi.reducerPath]: conversationApi.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(conversationApi.middleware),
