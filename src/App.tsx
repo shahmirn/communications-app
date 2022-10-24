@@ -2,8 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
 import './App.css';
+import {  useGetConversationsFromAndByTypeQuery } from './services/conversations';
 
 function App() {
+  const { data, error, isLoading } = useGetConversationsFromAndByTypeQuery({ from: undefined, type: undefined });
+
+  console.dir(data);
+
   return (
     <div className="App">
       <header className="App-header">
