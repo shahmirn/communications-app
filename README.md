@@ -17,6 +17,10 @@ Derived Requirements:
 ## Version
 0.0.1
 
+## Working Demo
+- https://communications-app.vercel.app/
+    - Deployed to free plan at https://vercel.app/
+
 ## Tech
 * [React] - A JavaScript library for building user interfaces
 * [Redux] - A predictable state container for JavaScript apps.
