@@ -7,7 +7,7 @@ export const conversationApi = createApi({
   reducerPath: 'conversationApi',
   baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:4000' }),
   endpoints: (builder) => ({
-    getConversationsFromAndByType: builder.query<Conversation, { from?: Conversation['from']; type?: Conversation['type'] }>({
+    getConversationsFromAndByType: builder.query<Conversation[], { from?: Conversation['from']; type?: Conversation['type'] }>({
       query: ({ from, type }) => `?${new URLSearchParams({ from: from ?? '', type: type ?? '' }).toString()}`,
     }),
   }),
